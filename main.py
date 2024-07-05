@@ -35,8 +35,8 @@ with st.sidebar:
         "Ask questions and get AI-generated responses!"
     )
     st.markdown("---")
-    st.markdown("[View frontend source code](https://github.com/yourusername/your-repo)")
-    st.markdown("[View backend source code](https://github.com/yourusername/your-repo)")
+    st.markdown("[View frontend source code](https://github.com/sarveshkp045/frontend)")
+    st.markdown("[View backend source code](https://github.com/sarveshkp045/backend)")
 
 # Display chat messages
 for message in st.session_state.messages:
