@@ -1,10 +1,10 @@
 import streamlit as st
 import requests
 
-BACKEND_URL = "http://localhost:8000"
+BACKEND_URL = "http://localhost:8080/"
 
 st.title("Tiny Stories Bot")
-st.caption("🚀 A Streamlit chatbot powered by BART")    
+st.caption("🚀 A Streamlit chatbot")    
 
 
 
@@ -54,6 +54,8 @@ if prompt := st.chat_input("What would you like to know?"):
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
+    # Show loading spinner
+    with st.spinner("Generating response..."):
         
         # Send request to backend
         response = requests.post(f"{BACKEND_URL}/generate", json={"question": prompt})
